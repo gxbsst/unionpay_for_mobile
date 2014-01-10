@@ -2,9 +2,13 @@ require 'rubygems'
 require 'spork'
 
 Spork.prefork do
+
 	require 'faraday'
 
 	require 'vcr'
+
+  require 'rspec'
+
 
 	VCR.configure do |c|
 		c.cassette_library_dir = 'fixtures/vcr_cassettes'
