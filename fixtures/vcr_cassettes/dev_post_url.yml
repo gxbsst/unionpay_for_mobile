@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://58.246.226.99/UpopWeb/api/BSPay.action
+    body:
+      encoding: UTF-8
+      string: merchantName=TEST&merchantId=&merchantOrderId=&merchantOrderTime=&merchantOrderAmt=&backEndUrl=&payResultUrl=&orderSource=&payMent=&payChannel=&sign=
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=EFE755FB543526B4B0358EC32F614882; Path=/UpopWeb
+      Cache-Control:
+      - no-store, no-cache, must-revalidate
+      Expires:
+      - Thu, 01 Jan 1970 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Content-Type:
+      - text/plain;charset=UTF-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '313'
+      Date:
+      - Thu, 09 Jan 2014 05:49:58 GMT
+    body:
+      encoding: UTF-8
+      string: charset=UTF-8&cupReserved=&exchangeDate=&exchangeRate=&merAbbr=&merId=&orderAmount=&orderCurrency=&orderNumber=&qid=&respCode=30&respMsg=Malformed
+        Message&respTime=&settleAmount=&settleCurrency=&settleDate=&signMethod=md5&signature=13d4101b154b5d5f458a3b2f1dc10d90&traceNumber=&traceTime=&transType=&version=1.0.0
+    http_version: 
+  recorded_at: Thu, 09 Jan 2014 05:48:46 GMT
+recorded_with: VCR 2.8.0

@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://shouyintai.umpay.com/orderPushPlatform/postServer/submitOrder.action
+    body:
+      encoding: UTF-8
+      string: merchantName=TEST&merchantId=&merchantOrderId=&merchantOrderTime=&merchantOrderAmt=&backEndUrl=&payResultUrl=&orderSource=&payMent=&payChannel=&sign=
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=695A84BFBD276F54B1CAD6E07C7F6F7F; Path=/orderPushPlatform/; HttpOnly
+      Content-Type:
+      - text/html;charset=utf-8
+      Content-Language:
+      - en-US
+      Content-Length:
+      - '1668'
+      Date:
+      - Thu, 09 Jan 2014 06:13:23 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        DQoNCg0KPCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9XM0MvL0RURCBIVE1M
+        IDQuMDEgVHJhbnNpdGlvbmFsLy9FTiI+DQo8aHRtbCB4bWxucz0iaHR0cDov
+        L3d3dy53My5vcmcvMTk5OS94aHRtbCI+DQo8aGVhZD4NCjxsaW5rIGhyZWY9
+        Ii9vcmRlclB1c2hQbGF0Zm9ybS9pbWFnZXMvaW5kZXguY3NzIiB0eXBlPSJ0
+        ZXh0L2NzcyIgcmVsPSJzdHlsZXNoZWV0IiAvPg0KPG1ldGEgbmFtZT0idmll
+        d3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aDsgaW5pdGlhbC1z
+        Y2FsZT0xLjA7IG1heGltdW0tc2NhbGU9MS4wOyBjaGFyc2V0PVVURi04Ij4N
+        Cg0KPHRpdGxlPuiuouWNleaOqOmAgeWksei0pS3pk7bogZTmiYvmnLrmlK/k
+        u5jmlLbpk7blj7A8L3RpdGxlPg0KDQo8L2hlYWQ+DQoNCjxzY3JpcHQgdHlw
+        ZT0idGV4dC9qYXZhc2NyaXB0Ij4NCi8v5o+Q5Lqk6KGo5Y2VDQpmdW5jdGlv
+        biBzdWJtaXRGb3JtT2JqMSgpew0KDQoJLy/mj5DkuqTooajljZXnmoTlnLDl
+        nYANCglkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibXlmb3JtIikuYWN0aW9u
+        PSJudWxsIjsNCglkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibXlmb3JtIiku
+        bWV0aG9kPSJwb3N0IjsNCglkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgibXlm
+        b3JtIikuc3VibWl0KCk7DQp9DQo8L3NjcmlwdD4NCjxib2R5Pg0KPGZvcm0g
+        aWQ9Im15Zm9ybSI+DQo8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0ibWVyY2hh
+        bnRJZCIgbmFtZT0ibWVyY2hhbnRJZCIgdmFsdWU9Im51bGwiPg0KPGlucHV0
+        IHR5cGU9ImhpZGRlbiIgaWQ9Im1lcmNoYW50T3JkZXJJZCIgbmFtZT0ibWVy
+        Y2hhbnRPcmRlcklkIiB2YWx1ZT0ibnVsbCI+DQo8aW5wdXQgdHlwZT0iaGlk
+        ZGVuIiBpZD0icmVzcENvZGUiIG5hbWU9InJlc3BDb2RlIiB2YWx1ZT0ibnVs
+        bCI+DQo8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0ibWVyY2hhbnRPcmRlclRp
+        bWUiIG5hbWU9Im1lcmNoYW50T3JkZXJUaW1lIiB2YWx1ZT0ibnVsbCI+DQoN
+        CjwvZm9ybT4NCg0KPGRpdiBjbGFzcz0idG9iZyI+PGltZyBzcmM9Ii9vcmRl
+        clB1c2hQbGF0Zm9ybS9pbWFnZXMvbG9nby5wbmciIHdpZHRoPSIxNzMiIGhl
+        aWdodD0iMzIiIC8+PC9kaXY+DQo8ZGl2IGNsYXNzPSJjb24iPg0KICA8ZGl2
+        IGNsYXNzPSJjb25fdGlzaGkiPg0KICAgIDxkaXYgY2xhc3M9ImNvbl90aXNo
+        aV90Ij48dGFibGUgd2lkdGg9IjIwOCIgYm9yZGVyPSIwIiBjZWxsc3BhY2lu
+        Zz0iMCIgY2VsbHBhZGRpbmc9IjAiPg0KICA8dHI+DQogICAgPHRkIHdpZHRo
+        PSIzMiI+PGltZyBzcmM9Ii9vcmRlclB1c2hQbGF0Zm9ybS9pbWFnZXMvY3Vv
+        dy5qcGciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCI+PC90ZD4NCiAgICA8dGQg
+        d2lkdGg9IjE3NiI+PHNtYWxsPuiuouWNleWPkemAgeWksei0pe+8gTwvc21h
+        bGw+PC90ZD4NCiAgPC90cj4NCjwvdGFibGU+DQogICAgCQ0KICAgICAgICAg
+        DQogICAgCSAgPGJyIC8+DQogICAgICAgICAgICAgIDwvZGl2Pg0KICAgICAg
+        ICAgICAgIDxkaXYgY2xhc3M9InJ1aSI+PGEgaHJlZj0iamF2YXNjcmlwdDpj
+        bG9zZVdpbmRvdygpOyI+PGltZyBzcmM9Ii9vcmRlclB1c2hQbGF0Zm9ybS9p
+        bWFnZXMvZmguanBnIiB3aWR0aD0iMjc5IiBoZWlnaHQ9IjQwIiAvPjwvYT48
+        YnIgLz48L2Rpdj4NCiAgICAJICANCjwvZGl2Pg0KPC9ib2R5Pg0KPC9odG1s
+        Pg0K
+    http_version: 
+  recorded_at: Thu, 09 Jan 2014 06:13:24 GMT
+recorded_with: VCR 2.8.0
