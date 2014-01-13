@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__), 'config')
+require File.join(File.dirname(__FILE__), 'helpers')
 module Unionpay
   class Params
 
@@ -54,7 +55,7 @@ module Unionpay
 
     def signature
       {
-        "signature" => build_signature,
+        "signature" => Unionpay::Helpers::Signature.sign(need_set_fields, config.security_key),
         "signMethod" => config.sign_method
       }        
     end
@@ -71,19 +72,6 @@ module Unionpay
 
     def errors
      @errors ||= []
-    end
-
-    private
-
-    def md5_security_key
-      Digest::MD5.hexdigest(config.security_key)
-    end
-
-    def build_signature
-      string = need_set_fields.map do |k,v|
-        "#{k}=#{v}&" 
-      end.join
-      Digest::MD5.hexdigest(string + md5_security_key)  
     end
 
   end

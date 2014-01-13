@@ -7,7 +7,7 @@ require File.join(File.dirname(__FILE__),'../../../lib/unionpay/config')
 
 describe Unionpay::Http do 
   let(:config) { Unionpay::Config.new }
-  let(:params) { Unionpay::Params.new("1111", 11111) }
+  let(:params) { Unionpay::Params.new("20111108150703852", 11111) }
 
   before(:each) do 
    Unionpay.stub(:env => :dev)
