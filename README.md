@@ -1,6 +1,6 @@
 # Unionpay
 
-TODO: Write a gem description
+# 这个是一个银联支付的Gem，请记住现在这个版本是未完成版本， 慎用。
 
 ## Installation
 
@@ -17,8 +17,27 @@ Or install it yourself as:
     $ gem install unionpay
 
 ## Usage
-
-TODO: Write usage instructions here
+    1. 
+	 # pay_controller new 
+	 
+	 Unionpay.env = :dev # :dev, :pre, :pro
+	 
+	 params = Unionpay::Params.build("20111108150703858", 1111) # 20111108150703858 为订单号, 1111为订单金>额
+	 @form = Unionpay.render_form(params)
+	 
+	 2. 在config/intializer 添加 unionpay.rb
+	 
+	 Unionpay.setup do |config|
+	 
+	  # TODO: 你可以根据不同的环境定义不同的URL
+	  
+     config.back_callback_url = "http://localhost:3000/notify/"
+     config.front_callback_url = "http://localhost:3000/notify/"
+    end
+    
+	 
+	 
+	
 
 ## Contributing
 
