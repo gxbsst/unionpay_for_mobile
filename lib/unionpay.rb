@@ -11,7 +11,7 @@ require "unionpay/unionpay"
 
 module Unionpay
 
-	include Unionpay
+	include self::Unionpay
 
 	# def self.process(order_number, amount,*hash)
 	# 	params = build_params(order_number, amount, hash)  
