@@ -38,7 +38,7 @@ module Unionpay
     end
   
     def config
-      @config ||= Unionpay::Config.new
+      @config ||= ::Unionpay.config
     end  
 
     #===============================================

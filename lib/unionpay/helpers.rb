@@ -13,9 +13,9 @@ module Unionpay
     end
 
     module Html
-     def self.render_form(params, config)
+     def self.render_form(params)
       html = [
-        "<form action='#{config.front_pay_url}' method='post'>"
+        "<form action='#{::Unionpay.config.front_pay_url}' method='post'>"
       ]
       params.each do |k,v|
         html << "<input type='hidden' name='#{k}' value='#{v}' />"

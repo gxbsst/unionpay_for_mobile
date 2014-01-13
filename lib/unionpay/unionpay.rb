@@ -6,6 +6,7 @@ module Unionpay
 		end
 
 		module ClassMethods
+
 			def env=(env)
 				@env ||= env 
 			end
@@ -14,8 +15,16 @@ module Unionpay
 				@env  
 			end
 
-			def render_form(params, config)
-				::Unionpay::Helpers::Html.render_form(params, config)
+			def render_form(params)
+				::Unionpay::Helpers::Html.render_form(params)
+			end
+
+			def config
+				@config ||= Config.new
+			end
+
+			def setup
+				yield config
 			end
 
 		end
