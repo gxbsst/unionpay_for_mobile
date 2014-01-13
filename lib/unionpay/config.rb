@@ -2,6 +2,8 @@
 module Unionpay
   class Config
 
+    # TODO: alias_method : back_end_url, back_callback_url
+    #
     VERSION = "1.0.0"
     MERCHANT_ID = "105550149170027"
     MERCHANT_NAME = "商户名称"

@@ -2,14 +2,14 @@ require File.join(File.dirname(__FILE__), 'config')
 module Unionpay
   class Params
 
-    attr_accessor :order_number, :amount, :options
+    attr_accessor :order_number, :amount, :options, :config
    
     def self.build(order_number, amount, hash = {})
       params = new(order_number, amount, hash)
       params.wrap_params
     end
 
-    def initialize(order_number, amount, hash)
+    def initialize(order_number, amount, hash = {})
       @order_number = order_number   
       @amount = amount
       @options = hash
