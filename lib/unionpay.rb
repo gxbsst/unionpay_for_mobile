@@ -1,20 +1,20 @@
-require "unionpay/version"
 require "base64"
 require "digest"
 require "openssl"
+
+require "unionpay/version"
+require "unionpay/config"
+require "unionpay/http"
+require "unionpay/params"
+require "unionpay/helpers"
+require "unionpay/unionpay"
 
 # require 'unionpay/params'
 # require 'unionpay/post'
 
 module Unionpay
 
-  def self.env=(env)
-   @@env ||= env 
-  end
-
-  def self.env
-   @@env  
-  end
+	include Unionpay
 
   def self.process(order_number, amount,*hash)
     params = build_params(order_number, amount, hash)  

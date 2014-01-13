@@ -13,13 +13,17 @@ module Unionpay
     end
 
     module Html
-
      def self.render_form(params, config)
-       http = Unionpay::Http.setup(params, config)
-       response = http.post
-       response.body
+      html = [
+        "<form action='#{config.front_pay_url}' method='post'>"
+      ]
+      params.each do |k,v|
+        html << "<input type='hidden' name='#{k}' value='#{v}' />"
+      end
+      html << "<input type='submit' />"
+      html << "</form>"
+      html.join
      end
-
     end
   end
 end

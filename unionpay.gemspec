@@ -5,7 +5,7 @@ require 'unionpay/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "unionpay"
-  spec.version       = Unionpay::VERSION
+  spec.version       = "0.0.1"
   spec.authors       = ["Weston Wei"]
   spec.email         = ["weixuhong@rongyi.com"]
   spec.description   = %q{union pay}

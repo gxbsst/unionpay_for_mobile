@@ -55,7 +55,7 @@ module Unionpay
 
     def signature
       {
-        "signature" => Unionpay::Helpers::Signature.sign(need_set_fields, config.security_key),
+        "signature" => Helpers::Signature.sign(need_set_fields, config.security_key),
         "signMethod" => config.sign_method
       }        
     end
