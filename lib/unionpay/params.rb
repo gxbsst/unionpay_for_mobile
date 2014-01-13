@@ -1,6 +1,7 @@
 require File.join(File.dirname(__FILE__), 'config')
 module Unionpay
   class Params
+
     attr_accessor :order_number, :amount, :options
    
     def self.build(order_number, amount, hash = {})
@@ -28,7 +29,7 @@ module Unionpay
         "backEndUrl" => config.back_callback_url,
         "orderTime" => order_time,
         "orderCurrency" => config.currency,
-        "transtype" => config.transtype,
+        "transType" => config.transtype,
         "charset" => config.charset,
         "orderAmount" => amount,
         "orderNumber" => order_number
@@ -37,7 +38,7 @@ module Unionpay
   
     def config
       @config ||= Unionpay::Config.new
-    end
+    end  
 
     #===============================================
     # MUST SET VALUE
@@ -63,7 +64,13 @@ module Unionpay
     end
    
     def valid?
-     Validator.valid?(wrap_params)  
+     validator = Validator.valid?(wrap_params)  
+     @errors = validator.errors
+     @errors.count > 0 ? false : true
+    end
+
+    def errors
+     @errors ||= []
     end
 
     private

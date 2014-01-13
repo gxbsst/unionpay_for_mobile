@@ -8,6 +8,14 @@ require "openssl"
 
 module Unionpay
 
+  def self.env=(env)
+   @@env ||= env 
+  end
+
+  def self.env
+   @@env  
+  end
+
   def self.process(order_number, amount,*hash)
     params = build_params(order_number, amount, hash)  
   end

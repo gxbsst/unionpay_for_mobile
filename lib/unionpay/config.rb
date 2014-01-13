@@ -3,25 +3,18 @@ module Unionpay
   class Config
 
     VERSION = "1.0.0"
-    
     MERCHANT_ID = "105550149170027"
-
     MERCHANT_NAME = "商户名称"
- 
     SIGN_METHOD = "md5"
-    
     TRANSTYPE = "01"
-    
     CURRENCY = "156"
-  
     CHARSET = "UTF-8"
-
     SECURITY_KEY = "88888888"
      
     attr_accessor :version, :merchant_id, :merchant_name, :sign_method, :transtype, :currency, :security_key, :front_pay_url, :back_pay_url, :front_callback_url, :back_callback_url, :charset
 
     def env
-      @env ||= Unionpay.env
+      @env ||= ::Unionpay.send(:env)
     end
     
     def charset

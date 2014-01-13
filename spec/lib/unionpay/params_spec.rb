@@ -38,8 +38,13 @@ describe Unionpay::Params do
  end
 
  describe "#valid?" do 
-  subject { Unionpay::Params.new("11111", 55.02, :ip => '127.0.0.1') }
-  its(:valid?) { should be_true } 
+   subject { Unionpay::Params.new("11111", 55.02, :ip => '127.0.0.1') }
+   before(:each) do 
+     subject.valid?
+   end
+   it "errors" do 
+      expect(subject.valid?).to be_true
+   end
  end
 
  describe "#options" do 

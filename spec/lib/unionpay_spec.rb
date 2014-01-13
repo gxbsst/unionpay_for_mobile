@@ -126,5 +126,16 @@ describe Unionpay do
 		# end
 	end
 
+  describe ".env" do 
+    before(:each) do 
+     Unionpay.env= :dev
+    end
+   
+    it "env is :dev" do 
+     expect(Unionpay.env).to eq(:dev)
+    end
+ 
+  end
+
 end
 

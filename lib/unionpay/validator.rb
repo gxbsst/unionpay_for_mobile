@@ -34,9 +34,9 @@ module Unionpay
 
     def execute
       NEED_SET_KEYS.each do |key| 
-       errors << "#{k}: not set value"  unless @params.has_key? key
+        self.errors << "#{key}: not set value"  unless @params.has_key? key
       end
-      errors.count > 0 ? true : false
+      self
     end 
 
   end
