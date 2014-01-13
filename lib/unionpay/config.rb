@@ -12,6 +12,7 @@ module Unionpay
     CURRENCY = "156"
     CHARSET = "UTF-8"
     SECURITY_KEY = "88888888"
+    REFUND_TRRANSTYPE= "04"
      
     attr_accessor :version, :merchant_id, :merchant_name, :sign_method, :transtype, :currency, :security_key, :front_pay_url, :back_pay_url, :front_callback_url, :back_callback_url, :charset
 
