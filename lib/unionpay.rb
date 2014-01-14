@@ -23,6 +23,16 @@ module Unionpay
      Helpers.render_form(params)
   end
 
+  # TODO:
+  #
+  def self.refund(order_number, qid)
+
+  end
+
+  def self.query(qid)
+    
+  end
+
 	# def self.process(order_number, amount,*hash)
 	# 	params = build_params(order_number, amount, hash)  
 	# end

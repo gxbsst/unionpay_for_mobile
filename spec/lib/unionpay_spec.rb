@@ -113,16 +113,7 @@ describe Unionpay do
     "merReserved"
   ]
 
-		conn = Faraday.new(:url => Unionpay::DEV_POST_HOST) do |faraday|
-			faraday.request  :url_encoded             
-			faraday.response :logger                  
-			faraday.adapter  Faraday.default_adapter  
-		end
 
-		# VCR.use_cassette('dev_back_url') do 
-			response = conn.post Unionpay::DEV_POST_URL, @test_params
-			expect(response.body).to include("...")
-		# end
 	end
 
   describe ".env" do 

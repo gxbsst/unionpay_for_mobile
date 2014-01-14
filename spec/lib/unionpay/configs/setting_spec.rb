@@ -2,6 +2,12 @@ require "spec_helper"
 
 describe Unionpay::Configs::Setting do 
 
+  before(:each) do 
+    ::Unionpay.env = :dev
+  end
+  it "env is :dev" do 
+   expect(::Unionpay.env).to eq(:dev) 
+  end
   it{ should respond_to :env }
   it{ should respond_to :charset}
   it{ should respond_to :front_pay_url}
@@ -31,8 +37,13 @@ describe Unionpay::Configs::Setting do
   its(:security_key){ should eq("88888888") }
 
   context "pre" do 
+    subject { ::Unionpay::Configs::Setting.new }
     before(:each) do 
-        ::Unionpay.env = :pre
+        ::Unionpay.stub(:env => :pre)
+    end
+
+    it "env is :dev" do 
+      expect(::Unionpay.env).to eq(:pre) 
     end
     its(:front_pay_url) { should eq("http://www.epay.lxdns.com/UpopWeb/api/Pay.action") }
     its(:back_pay_url) { should eq("http://www.epay.lxdns.com/UpopWeb/api/BSPay.action") }
@@ -40,7 +51,7 @@ describe Unionpay::Configs::Setting do
 
   context "pro" do 
     before(:each) do 
-        ::Unionpay.env = :pro
+        ::Unionpay.stub(:env => :pro)
     end
     its(:front_pay_url) { should eq("https://unionpaysecure.com/api/Pay.action") }
     its(:back_pay_url) { should eq("https://besvr.unionpaysecure.com/api/BSPay.action") }
