@@ -4,7 +4,7 @@ module Unionpay
   class Params
 
     attr_accessor :order_number, :amount, :options, :config
-   
+
     def self.build(order_number, amount, hash = {})
       params = new(order_number, amount, hash)
       params.wrap_params
@@ -36,7 +36,7 @@ module Unionpay
         "orderNumber" => order_number
       }
     end
-  
+
     def config
       @config ||= ::Unionpay.config
     end  
@@ -63,15 +63,15 @@ module Unionpay
     def [] key
       options[key]
     end
-   
+
     def valid?
-     validator = Validator.valid?(wrap_params)  
-     @errors = validator.errors
-     @errors.count > 0 ? false : true
+      validator = Validator.valid?(wrap_params)  
+      @errors = validator.errors
+      @errors.count > 0 ? false : true
     end
 
     def errors
-     @errors ||= []
+      @errors ||= []
     end
 
   end

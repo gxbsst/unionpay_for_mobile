@@ -3,7 +3,7 @@ require File.join(File.dirname(__FILE__), 'errors')
 module Unionpay
   class Validator
 
-   attr_accessor :errors
+    attr_accessor :errors
 
     NEED_SET_KEYS = [
       "customerIp",
@@ -21,7 +21,7 @@ module Unionpay
     ]
 
     def self.valid?(params)
-       new(params).execute
+      new(params).execute
     end
 
     def initialize(params)
@@ -29,7 +29,7 @@ module Unionpay
     end
 
     def errors
-     @errors ||= Errors.new
+      @errors ||= Errors.new
     end
 
     def execute

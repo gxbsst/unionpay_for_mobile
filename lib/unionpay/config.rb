@@ -13,13 +13,13 @@ module Unionpay
     CHARSET = "UTF-8"
     SECURITY_KEY = "88888888"
     REFUND_TRRANSTYPE= "04"
-     
+
     attr_accessor :version, :merchant_id, :merchant_name, :sign_method, :transtype, :currency, :security_key, :front_pay_url, :back_pay_url, :front_callback_url, :back_callback_url, :charset
 
     def env
       @env ||= ::Unionpay.send(:env)
     end
-    
+
     def charset
       @charset ||= CHARSET
     end
@@ -51,36 +51,36 @@ module Unionpay
     end
 
     def back_callback_url 
-     @back_callback_url
+      @back_callback_url
     end
 
     def version
       @version ||= VERSION
     end
-    
+
     def merchant_id
-     @merchant_id ||= MERCHANT_ID 
+      @merchant_id ||= MERCHANT_ID 
     end
 
     def merchant_name
-     @merchant_name ||= MERCHANT_NAME
+      @merchant_name ||= MERCHANT_NAME
     end
-  
+
     def sign_method
       @sign_method ||= SIGN_METHOD
     end
-    
+
     def transtype
       @transtype ||= TRANSTYPE
     end
 
     def currency 
-     @currency ||= CURRENCY
+      @currency ||= CURRENCY
     end
 
     def security_key
-     @security_key ||= SECURITY_KEY
+      @security_key ||= SECURITY_KEY
     end
-    
+
   end
 end
