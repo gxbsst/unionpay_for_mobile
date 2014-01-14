@@ -12,15 +12,15 @@ module Unionpay
       end
 
       def env
-        @env  
+        @env  ||= :dev
       end
 
       def render_form(params)
-        ::Unionpay::Helpers::Html.render_form(params)
+        ::Unionpay::Helpers.render_form(params)
       end
 
       def config
-        @config ||= Config.new
+        @config ||= Configs.settings
       end
 
       def setup

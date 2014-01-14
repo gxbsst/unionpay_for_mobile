@@ -1,9 +1,8 @@
 require 'rubygems'
 require 'spork'
+require "unionpay"
 
 Spork.prefork do
-
-	require 'faraday'
 
 	require 'vcr'
 

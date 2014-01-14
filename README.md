@@ -20,10 +20,9 @@ Or install it yourself as:
     1. 
 	 # pay_controller new 
 	 
-	 Unionpay.env = :dev # :dev, :pre, :pro
-	 
-	 params = Unionpay::Params.build("20111108150703858", 1111) # 20111108150703858 为订单号, 1111为订单金>额
-	 @form = Unionpay.render_form(params)
+	 order_number = "20111108150703858"
+	 amount = 11111
+	 @form = Unionpay.build_form(params)
 	 
 	 2. 在config/intializer 添加 unionpay.rb
 	 
