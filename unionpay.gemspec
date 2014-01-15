@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "spork"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "faker"
-  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "webmock", "1.15.0"
   spec.add_runtime_dependency "curb"
   spec.add_runtime_dependency "pry"
 end
