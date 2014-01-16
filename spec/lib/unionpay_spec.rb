@@ -1,6 +1,5 @@
 # encoding: utf-8
 require "spec_helper"
-require File.join(File.dirname(__FILE__),'../../lib/unionpay')
 
 # require '../lib/unionpay'
 # <form method="post" action="http://114.113.159.222:8080/orderPushPlatform/postServer/submitOrder.action" name="threePayForm">
@@ -114,16 +113,7 @@ describe Unionpay do
     "merReserved"
   ]
 
-		conn = Faraday.new(:url => Unionpay::DEV_POST_HOST) do |faraday|
-			faraday.request  :url_encoded             
-			faraday.response :logger                  
-			faraday.adapter  Faraday.default_adapter  
-		end
 
-		# VCR.use_cassette('dev_back_url') do 
-			response = conn.post Unionpay::DEV_POST_URL, @test_params
-			expect(response.body).to include("...")
-		# end
 	end
 
   describe ".env" do 
@@ -137,5 +127,18 @@ describe Unionpay do
  
   end
 
+  describe ".render_form" do 
+    let(:params) {Unionpay::Params.build("11111", 55.02, :ip => '127.0.0.1')}
+    
+    it "can render_form" do 
+      expect(Unionpay.render_form(params)).to include("form")
+    end
+  end
+
+  describe ".build_form" do 
+    it "can build a post form" do 
+      expect(Unionpay.build_form("11111", 55)).to include("form")
+    end
+  end
 end
 

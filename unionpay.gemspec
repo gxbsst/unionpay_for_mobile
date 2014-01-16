@@ -5,9 +5,9 @@ require 'unionpay/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "unionpay"
-  spec.version       = "0.0.1"
+  spec.version       = "0.0.2"
   spec.authors       = ["Weston Wei"]
-  spec.email         = ["weixuhong@rongyi.com"]
+  spec.email         = ["weixuhong@gmail.com"]
   spec.description   = %q{union pay}
   spec.summary       = %q{union pay}
   spec.homepage      = ""
@@ -24,8 +24,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "spork"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "faker"
-  spec.add_development_dependency "webmock"
-  spec.add_runtime_dependency "faraday"
+  spec.add_development_dependency "webmock", "1.15.0"
   spec.add_runtime_dependency "curb"
   spec.add_runtime_dependency "pry"
 end

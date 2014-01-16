@@ -2,16 +2,36 @@ require "base64"
 require "digest"
 require "openssl"
 
-require "unionpay/version"
-require "unionpay/config"
-require "unionpay/http"
+require "unionpay/params/builder"
+require "unionpay/params/validator"
+require "unionpay/params/errors"
+
 require "unionpay/params"
 require "unionpay/helpers"
 require "unionpay/unionpay"
+require "unionpay/configs"
+require "unionpay/http"
+
+require "unionpay/version"
 
 module Unionpay
 
 	include self::Unionpay
+
+  def self.build_form(order_number, amount)
+     params = Params.build(order_number, amount) 
+     Helpers.render_form(params)
+  end
+
+  # TODO:
+  #
+  def self.refund(order_number, qid)
+
+  end
+
+  def self.query(qid)
+    
+  end
 
 	# def self.process(order_number, amount,*hash)
 	# 	params = build_params(order_number, amount, hash)  

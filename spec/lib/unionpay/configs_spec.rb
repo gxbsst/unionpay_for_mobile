@@ -1,9 +1,8 @@
 # encoding: utf-8
 require 'spec_helper'
-require File.join(File.dirname(__FILE__),'../../../lib/unionpay/config')
 
-describe Unionpay::Config do 
-  subject(:config) { Unionpay::Config.new }
+describe Unionpay::Configs do 
+  subject(:config) { Unionpay::Configs.new }
   before(:each) do 
    config.front_callback_url = "http://www.test.com"
    config.back_callback_url = "http://www.test.com"
