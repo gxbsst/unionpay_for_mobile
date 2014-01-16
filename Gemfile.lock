@@ -6,7 +6,7 @@ PATH
       pry
 
 GEM
-  remote: http://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     addressable (2.3.5)
     coderay (1.1.0)
