@@ -31,7 +31,6 @@ Or install it yourself as:
 ### 2 在(config/intializer) 添加 (unionpay.rb)
  ```ruby
  Unionpay.setup do |config|
- 
    # TODO: 你可以根据不同的环境定义不同的URL
    config.back_callback_url = "http://localhost:3000/notify/"
    config.front_callback_url = "http://localhost:3000/notify/"
@@ -39,7 +38,6 @@ Or install it yourself as:
  ```
 
 ## Contributing
-
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
