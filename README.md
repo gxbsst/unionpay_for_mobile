@@ -5,41 +5,39 @@
 ## Installation
 
 Add this line to your application's Gemfile:
-
-    gem 'unionpay'
-
+```ruby
+gem 'unionpay'
+```
 And then execute:
 
-    $ bundle
-
+```zsh
+  $ bundle
+```
 Or install it yourself as:
 
-    $ gem install unionpay
-
+```zsh
+  $ gem install unionpay
+```
 ## Usage
-    1. 
-	 # pay_controller new 
-	 
-	 order_number = "20111108150703858"
-	 amount = 11111
-	 @form = Unionpay.build_form(params)
-	 
-	 2. 在config/intializer 添加 unionpay.rb
-	 
-	 Unionpay.setup do |config|
-	 
-	  # TODO: 你可以根据不同的环境定义不同的URL
-	  
-     config.back_callback_url = "http://localhost:3000/notify/"
-     config.front_callback_url = "http://localhost:3000/notify/"
-    end
-    
-	 
-	 
-	
+
+### 1
+```ruby
+  # pay_controller new 
+  order_number = "20111108150703858"
+  amount = 11111
+  @form = Unionpay.build_form(params)
+```
+
+### 2 在(config/intializer) 添加 (unionpay.rb)
+ ```ruby
+ Unionpay.setup do |config|
+   # TODO: 你可以根据不同的环境定义不同的URL
+   config.back_callback_url = "http://localhost:3000/notify/"
+   config.front_callback_url = "http://localhost:3000/notify/"
+ end
+ ```
 
 ## Contributing
-
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)

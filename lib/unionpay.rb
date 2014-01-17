@@ -16,7 +16,7 @@ require "unionpay/version"
 
 module Unionpay
 
-	include Unionpay
+	include self::Unionpay
 
   def self.build_form(order_number, amount)
      params = Params.build(order_number, amount) 

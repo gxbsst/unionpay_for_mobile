@@ -16,3 +16,5 @@ test/version_tmp
 tmp
 *.swo
 *.swp
+.ruby-gemset
+.ruby-version
